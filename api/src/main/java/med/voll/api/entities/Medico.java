@@ -1,7 +1,10 @@
 package med.voll.api.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import med.voll.api.endereco.Endereco;
 import med.voll.api.medico.DadosAtualizarMedico;
 import med.voll.api.medico.DadosCadastroMedico;
@@ -26,7 +29,7 @@ public class Medico {
 
     private String email;
 
-    private  String telefone;
+    private String telefone;
 
     private String crm;
 
@@ -53,13 +56,13 @@ public class Medico {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
-        if (dados.telefone() != null){
+        if (dados.telefone() != null) {
             this.telefone = dados.telefone();
         }
-        if (dados.email() != null){
+        if (dados.email() != null) {
             this.email = dados.email();
         }
-        if (dados.endereco() != null){
+        if (dados.endereco() != null) {
             this.endereco.atualizarInformacoes(dados.endereco());
         }
 

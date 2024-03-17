@@ -53,7 +53,7 @@ public class Paciente {
         }
     }
 
-    public void inativar(){
+    public void inativar() {
         this.ativo = false;
     }
 }
