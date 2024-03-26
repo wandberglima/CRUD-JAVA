@@ -1,14 +1,13 @@
-package med.voll.api.entities;
+package med.voll.api.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.Endereco;
-import med.voll.api.medico.DadosAtualizarMedico;
-import med.voll.api.medico.DadosCadastroMedico;
-import med.voll.api.medico.Especialidade;
+import med.voll.api.domain.dtos.medicoDTO.DadosAtualizarMedico;
+import med.voll.api.domain.dtos.medicoDTO.DadosCadastroMedico;
+import med.voll.api.domain.dtos.medicoDTO.enums.Especialidade;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")

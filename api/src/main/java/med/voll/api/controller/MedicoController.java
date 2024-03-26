@@ -1,12 +1,12 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.entities.Medico;
-import med.voll.api.medico.DadosAtualizarMedico;
-import med.voll.api.medico.DadosCadastroMedico;
-import med.voll.api.medico.DadosDetalhamentoMedico;
-import med.voll.api.medico.DadosListagemMedicos;
-import med.voll.api.repositories.MedicoRepository;
+import med.voll.api.domain.entities.Medico;
+import med.voll.api.domain.dtos.medicoDTO.DadosAtualizarMedico;
+import med.voll.api.domain.dtos.medicoDTO.DadosCadastroMedico;
+import med.voll.api.domain.dtos.medicoDTO.DadosDetalhamentoMedico;
+import med.voll.api.domain.dtos.medicoDTO.DadosListagemMedicos;
+import med.voll.api.domain.repositories.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -91,6 +91,7 @@ public class MedicoController {
 
     @GetMapping("/{id}")
     public ResponseEntity detalhar(@PathVariable Long id) {
+
         var medico = repository.getReferenceById(id);
 
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
