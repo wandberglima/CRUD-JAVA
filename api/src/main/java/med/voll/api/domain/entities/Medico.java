@@ -16,8 +16,6 @@ import med.voll.api.domain.dtos.medicoDTO.enums.Especialidade;
 @AllArgsConstructor
 // gerar o equals somente em cima do id e nada mais.
 @EqualsAndHashCode(of = "id")
-
-
 public class Medico {
 
     @Id
